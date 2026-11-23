@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mushtaq Meo Milk Shop | مشتاق میو ملک شاپ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --emerald-950: #062819;
+      --emerald-900: #0b3b24;
+      --emerald-800: #125233;
+      --emerald-700: #196b43;
+      --gold-500: #c8963e;
+      --gold-400: #dfb15b;
+      --gold-100: #fbf4e4;
+      --cream-50: #fcfaf5;
+      --cream-100: #f5efe4;
+      --water-700: #0c5c8a;
+      --water-600: #0e74ad;
+      --water-100: #e7f4fc;
+      --whatsapp: #16a34a;
+      --whatsapp-dark: #15803d;
+      --text-dark: #18231c;
+      --text-muted: #55635a;
+      --border: #e5dfd3;
+      --shadow-sm: 0 4px 14px rgba(11, 59, 36, 0.06);
+      --shadow-md: 0 12px 32px rgba(11, 59, 36, 0.1);
+      --shadow-lg: 0 20px 45px rgba(6, 40, 25, 0.16);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--cream-50);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding-bottom: 84px;
+    }
+
+    .urdu-font {
+      font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', serif;
+      line-height: 2;
+    }
+
+    html[dir="rtl"] body {
+      font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(252, 250, 245, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--emerald-900);
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--emerald-900), var(--emerald-700));
+      display: grid;
+      place-items: center;
+      color: var(--gold-400);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.18rem;
+      line-height: 1.2;
+      color: var(--emerald-950);
+    }
+
+    .brand-sub {
+      font-size: 0.85rem;
+      color: var(--gold-500);
+      font-weight: 700;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin-inline-end: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--emerald-700);
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--emerald-900);
+      color: #fff;
+      border: 1px solid var(--gold-500);
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .lang-btn:hover {
+      background: var(--emerald-800);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(200, 150, 62, 0.22), transparent 45%),
+                  linear-gradient(135deg, var(--emerald-950) 0%, var(--emerald-900) 55%, var(--emerald-800) 100%);
+      color: #fff;
+      padding: 64px 0 76px;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 150, 62, 0.18);
+      border: 1px solid rgba(223, 177, 91, 0.45);
+      color: var(--gold-400);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    html[dir="rtl"] .hero h1 {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 1.65;
+    }
+
+    .hero-urdu-title {
+      font-size: clamp(1.35rem, 2.5vw, 1.95rem);
+      color: var(--gold-400);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1.03rem;
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--emerald-950);
+      box-shadow: 0 8px 20px rgba(200, 150, 62, 0.35);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-card h3 {
+      color: var(--gold-400);
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rate-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rate-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .rate-name {
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .rate-sub {
+      display: block;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .rate-pill {
+      background: rgba(223, 177, 91, 0.2);
+      border: 1px solid rgba(223, 177, 91, 0.4);
+      color: var(--gold-400);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+
+    /* Sections */
+    section {
+      padding: 64px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--gold-500);
+      background: var(--gold-100);
+      border: 1px solid rgba(200, 150, 62, 0.3);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .section-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      color: var(--emerald-950);
+      margin-bottom: 8px;
+    }
+
+    html[dir="rtl"] .section-head h2 {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 1.7;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Products Grid */
+    .order-layout {
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold-400);
+    }
+
+    .product-card.active {
+      border: 2px solid var(--emerald-700);
+      background: #fafffc;
+    }
+
+    .product-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .product-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--cream-100);
+      display: grid;
+      place-items: center;
+      font-size: 1.45rem;
+      flex-shrink: 0;
+    }
+
+    .price-badge {
+      background: var(--emerald-900);
+      color: var(--gold-400);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .price-badge.ask {
+      background: var(--cream-100);
+      color: var(--emerald-900);
+      border: 1px solid var(--border);
+    }
+
+    .product-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--emerald-950);
+      margin-bottom: 2px;
+    }
+
+    .product-urdu {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      font-size: 0.95rem;
+      color: var(--gold-500);
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.8;
+    }
+
+    .product-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .qty-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--cream-50);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 6px;
+    }
+
+    .qty-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      border: none;
+      background: var(--emerald-900);
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background 0.15s;
+    }
+
+    .qty-btn:hover {
+      background: var(--emerald-700);
+    }
+
+    .qty-btn.minus {
+      background: #fff;
+      color: var(--emerald-900);
+      border: 1px solid var(--border);
+    }
+
+    .qty-val {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--emerald-950);
+    }
+
+    /* Order Summary Panel */
+    .order-box {
+      position: sticky;
+      top: 90px;
+      background: #fff;
+      border: 2px solid var(--emerald-900);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .order-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .order-box-header h3 {
+      font-size: 1.18rem;
+      color: var(--emerald-950);
+    }
+
+    .clear-btn {
+      background: none;
+      border: none;
+      color: #b91c1c;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .cart-items {
+      max-height: 220px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+
+    .cart-empty {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 18px 10px;
+      background: var(--cream-50);
+      border-radius: 10px;
+      border: 1px dashed var(--border);
+    }
+
+    .cart-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--cream-100);
+      font-size: 0.92rem;
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--gold-100);
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      color: var(--emerald-950);
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--emerald-950);
+      margin-bottom: 4px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      background: var(--cream-50);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: var(--emerald-700);
+      background: #fff;
+    }
+
+    .msg-preview {
+      background: #eefaf1;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: #14532d;
+      white-space: pre-line;
+      margin-bottom: 14px;
+      max-height: 130px;
+      overflow-y: auto;
+    }
+
+    .full-btn {
+      width: 100%;
+    }
+
+    /* Water Supply Section */
+    .water-section {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e6f4fd 100%);
+      border-top: 1px solid #cde7f8;
+      border-bottom: 1px solid #cde7f8;
+    }
+
+    .water-card {
+      background: #fff;
+      border: 1px solid #bde0f7;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .water-timing-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--water-100);
+      color: var(--water-700);
+      border: 1px solid #a9d8f5;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      margin: 14px 0 18px;
+    }
+
+    .water-order-panel {
+      background: var(--water-100);
+      border: 1px solid #bde0f7;
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .btn-water {
+      background: var(--water-600);
+      color: #fff;
+    }
+
+    .btn-water:hover {
+      background: var(--water-700);
+    }
+
+    /* Contact Cards */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .badge-call {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge-both {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .badge-water {
+      background: var(--water-100);
+      color: var(--water-700);
+    }
+
+    .contact-number {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: var(--emerald-950);
+      margin: 10px 0 18px;
+      direction: ltr;
+    }
+
+    .contact-btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-call {
+      background: var(--emerald-900);
+      color: #fff;
+    }
+
+    .btn-call:hover {
+      background: var(--emerald-800);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--emerald-950);
+      color: rgba(255,255,255,0.82);
+      text-align: center;
+      padding: 34px 20px;
+    }
+
+    footer h4 {
+      color: var(--gold-400);
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    /* Sticky Floating WhatsApp Bar */
+    .floating-bar {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 99;
+      background: var(--emerald-950);
+      color: #fff;
+      border: 1px solid var(--gold-500);
+      border-radius: 999px;
+      padding: 8px 10px 8px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow-lg);
+      max-width: calc(100% - 24px);
+    }
+
+    .floating-bar span {
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .floating-bar .btn {
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .order-layout,
+      .water-card,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .order-box {
+        position: static;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 44px 0 54px;
+      }
+      .water-card {
+        padding: 22px;
+      }
+      .floating-bar span {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.5C12 2.5 5.5 10.2 5.5 15a6.5 6.5 0 0 0 13 0c0-4.8-6.5-12.5-6.5-12.5zm0 16.5a4 4 0 0 1-4-4c0-1.9 2.1-5.4 4-8 1.9 2.6 4 6.1 4 8a4 4 0 0 1-4 4z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">Mushtaq Meo Milk Shop</div>
+          <div class="brand-sub urdu-font">مشتاق میو ملک شاپ</div>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="#items" data-i18n="navItems">Dairy & Bakery</a></li>
+          <li><a href="#water" data-i18n="navWater">Water Supply</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        </ul>
+        <button id="langToggle" class="lang-btn" type="button" onclick="toggleLanguage()">
+          🌐 <span id="langBtnText">اردو میں دیکھیں</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">★ <span data-i18n="heroBadge">100% Pure & Fresh Daily Dairy</span></div>
+        <h1 data-i18n="heroTitle">Mushtaq Meo Milk Shop</h1>
+        <div class="hero-urdu-title urdu-font">مشتاق میو ملک شاپ — خالص دودھ، دہی اور دیسی مصنوعات</div>
+        <p data-i18n="heroDesc">
+          Pure Buffalo & Cow Milk, fresh thick Dahi, Makhan, Khoya, Desi Ghee, Lassi, Bakery items, and reliable Water Supply — order directly on WhatsApp in seconds.
+        </p>
+        <div class="hero-cta">
+          <a href="#items" class="btn btn-gold" data-i18n="heroBtnOrder">🛒 Build WhatsApp Order</a>
+          <a href="https://wa.me/923412881746?text=Assalam-o-Alaikum%20Mushtaq%20Meo%20Milk%20Shop%2C%20mujhe%20order%20dena%20hai." target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="heroBtnDirectWa">
+            💬 Direct WhatsApp Chat
+          </a>
+          <a href="#water" class="btn btn-outline-light" data-i18n="heroBtnWater">💧 Water Supply</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>
+          <span data-i18n="todayRates">Today's Highlights</span>
+          <span class="urdu-font" style="font-size:0.95rem;">تازہ ریٹس</span>
+        </h3>
+        <div class="rate-row">
+          <div>
+            <span class="rate-name" data-i18n="rateMilk">Buffalo & Cow Milk</span>
+            <span class="rate-sub urdu-font">بھینس اور گائے کا خالص دودھ</span>
+          </div>
+          <span class="rate-pill" data-i18n="milkPricePill">Rs. 260 / kg</span>
+        </div>
+        <div class="rate-row">
+          <div>
+            <span class="rate-name" data-i18n="rateDahi">Fresh Thick Dahi</span>
+            <span class="rate-sub urdu-font">تازہ گاڑھا دہی</span>
+          </div>
+          <span class="rate-pill" data-i18n="dahiPricePill">Rs. 280 / kg</span>
+        </div>
+        <div class="rate-row">
+          <div>
+            <span class="rate-name" data-i18n="rateSpecial">Makhan, Khoya, Desi Ghee, Lassi & Bakery</span>
+            <span class="rate-sub urdu-font">مکھن، کھویا، دیسی گھی، لسی اور بیکری</span>
+          </div>
+          <span class="rate-pill" data-i18n="freshPill">Fresh Daily</span>
+        </div>
+        <div class="rate-row">
+          <div>
+            <span class="rate-name" data-i18n="rateWater">Water Supply Timing</span>
+            <span class="rate-sub urdu-font">واٹر سپلائی ٹائمنگ</span>
+          </div>
+          <span class="rate-pill">10:30 AM – 10:30 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dairy & Bakery Order Builder -->
+  <section id="items">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag" data-i18n="menuTag">Fresh Dairy & Bakery</span>
+        <h2 data-i18n="menuTitle">Select Items & Order on WhatsApp</h2>
+        <p data-i18n="menuSubtitle">Tap + to add items. Your formatted WhatsApp order message will be created automatically.</p>
+      </div>
+
+      <div class="order-layout">
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid"></div>
+
+        <!-- Live WhatsApp Order Panel -->
+        <aside class="order-box">
+          <div class="order-box-header">
+            <h3 data-i18n="orderSummaryTitle">🧾 Your WhatsApp Order</h3>
+            <button type="button" class="clear-btn" onclick="clearCart()" data-i18n="clearBtn">Clear All</button>
+          </div>
+
+          <div class="cart-items" id="cartItems"></div>
+
+          <div class="cart-total-row">
+            <span data-i18n="estimatedTotal">Estimated Total (Priced Items):</span>
+            <span id="cartTotal">Rs. 0</span>
+          </div>
+
+          <div class="form-group">
+            <label for="custName" data-i18n="labelName">Your Name / آپ کا نام</label>
+            <input type="text" id="custName" class="form-control" placeholder="e.g. Ali / علی" oninput="updateOrderSummary()" />
+          </div>
+
+          <div class="form-group">
+            <label for="custAddress" data-i18n="labelAddress">Delivery Address / پتہ</label>
+            <input type="text" id="custAddress" class="form-control" placeholder="House #, Street, Area" oninput="updateOrderSummary()" />
+          </div>
+
+          <div class="form-group">
+            <label for="custNote" data-i18n="labelNote">Extra Details (Optional) / مزید تفصیل</label>
+            <input type="text" id="custNote" class="form-control" placeholder="e.g. Bakery item name or special note" oninput="updateOrderSummary()" />
+          </div>
+
+          <div class="msg-preview" id="msgPreview"></div>
+
+          <a id="waOrderBtn" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp full-btn">
+            💬 <span data-i18n="sendWaBtn">Send Order on WhatsApp (+92 341 2881746)</span>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Water Supply Section -->
+  <section class="water-section" id="water">
+    <div class="container">
+      <div class="water-card">
+        <div>
+          <span class="section-tag" style="background:var(--water-100); color:var(--water-700); border-color:#a9d8f5;" data-i18n="waterTag">Water Supply Service</span>
+          <h2 style="font-family:'Playfair Display', serif; font-size:2rem; color:var(--emerald-950); margin-bottom:4px;" data-i18n="waterTitle">
+            Clean Drinking Water Supply
+          </h2>
+          <div class="urdu-font" style="font-size:1.25rem; color:var(--water-700); font-weight:700;">
+            واٹر سپلائی سروس — صاف اور معیاری پانی
+          </div>
+
+          <div class="water-timing-box">
+            🕙 <span data-i18n="waterTimeText">Order Anytime: 10:30 AM to 10:30 PM (صبح 10:30 سے رات 10:30 تک)</span>
+          </div>
+
+          <p style="color:var(--text-muted); margin-bottom:20px;" data-i18n="waterDesc">
+            Need water cans or bottles delivered? You can call or send a direct WhatsApp order anytime between 10:30 AM and 10:30 PM.
+          </p>
+
+          <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <a href="tel:03289795134" class="btn btn-water">
+              📞 <span data-i18n="callWaterBtn">Call Water Supply: 0328-9795134</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="water-order-panel">
+          <h3 style="color:var(--water-700); margin-bottom:12px;" data-i18n="waterQuickTitle">💧 Quick Water WhatsApp Order</h3>
+          <div class="form-group">
+            <label for="waterQty" data-i18n="waterQtyLabel">Quantity (Bottles / Cans) — تعداد</label>
+            <input type="text" id="waterQty" class="form-control" value="1 Bottle / Can" oninput="updateWaterLink()" />
+          </div>
+          <div class="form-group">
+            <label for="waterAddr" data-i18n="waterAddrLabel">Address / پتہ</label>
+            <input type="text" id="waterAddr" class="form-control" placeholder="Enter your address" oninput="updateWaterLink()" />
+          </div>
+          <a id="waterWaBtn" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp full-btn">
+            💬 <span data-i18n="waterWaBtnText">Order Water on WhatsApp (0328-9795134)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Numbers Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag" data-i18n="contactTag">Direct Contact</span>
+        <h2 data-i18n="contactTitle">Call or WhatsApp Us</h2>
+        <p data-i18n="contactSubtitle">Reach the right number directly for shop orders, inquiries, or water supply.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Call Only -->
+        <div class="contact-card">
+          <div>
+            <span class="contact-badge badge-call" data-i18n="callOnlyBadge">📞 Call Only (صرف کال)</span>
+            <h3 data-i18n="callOnlyTitle">Shop Inquiry Line</h3>
+            <p class="urdu-font" style="font-size:0.92rem; color:var(--text-muted);">صرف کال کے لیے نمبر</p>
+            <div class="contact-number">0309-4700485</div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:03094700485" class="btn btn-call full-btn">📞 <span data-i18n="callNow">Call Now</span></a>
+          </div>
+        </div>
+
+        <!-- Shop Order Call + WhatsApp -->
+        <div class="contact-card" style="border:2px solid var(--emerald-700);">
+          <div>
+            <span class="contact-badge badge-both" data-i18n="bothShopBadge">📞 Call & WhatsApp (آرڈر نمبر)</span>
+            <h3 data-i18n="shopOrderTitle">Dairy & Bakery Orders</h3>
+            <p class="urdu-font" style="font-size:0.92rem; color:var(--text-muted);">کال اور واٹس ایپ آرڈر کے لیے</p>
+            <div class="contact-number">+92 341 2881746</div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:+923412881746" class="btn btn-call">📞 <span data-i18n="callBtn">Call</span></a>
+            <a href="https://wa.me/923412881746?text=Assalam-o-Alaikum%20Mushtaq%20Meo%20Milk%20Shop%2C%20mujhe%20order%20karna%20hai." target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Water Supply Call + WhatsApp -->
+        <div class="contact-card">
+          <div>
+            <span class="contact-badge badge-water" data-i18n="bothWaterBadge">💧 Call & WhatsApp (واٹر سپلائی)</span>
+            <h3 data-i18n="waterContactTitle">Water Supply (10:30 AM – 10:30 PM)</h3>
+            <p class="urdu-font" style="font-size:0.92rem; color:var(--text-muted);">واٹر سپلائی کال اور واٹس ایپ</p>
+            <div class="contact-number">0328-9795134</div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:03289795134" class="btn btn-water">📞 <span data-i18n="callBtn">Call</span></a>
+            <a href="https://wa.me/923289795134?text=Assalam-o-Alaikum%2C%20mujhe%20Water%20Supply%20ka%20order%20dena%20hai." target="_blank" rel="noopener" class="btn btn-whatsapp">💬 WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <h4>Mushtaq Meo Milk Shop | مشتاق میو ملک شاپ</h4>
+      <p data-i18n="footerDesc">Pure Buffalo & Cow Milk • Dahi • Makhan • Khoya • Desi Ghee • Lassi • Bakery • Water Supply</p>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Bar -->
+  <div class="floating-bar">
+    <span id="floatText">🛒 <span id="floatCount">0</span> <span data-i18n="itemsSelected">items selected</span></span>
+    <a id="floatWaBtn" href="https://wa.me/923412881746?text=Assalam-o-Alaikum%20Mushtaq%20Meo%20Milk%20Shop%2C%20mujhe%20order%20dena%20hai." target="_blank" rel="noopener" class="btn btn-whatsapp">
+      💬 <span data-i18n="quickOrderWa">Order on WhatsApp</span>
+    </a>
+  </div>
+
+  <script>
+    const products = [
+      {
+        id: 'milk_buffalo',
+        icon: '🥛',
+        en: 'Buffalo Milk (Pure)',
+        ur: 'بھینس کا خالص دودھ',
+        descEn: 'Fresh & creamy pure buffalo milk',
+        descUr: 'تازہ اور گاڑھا خالص بھینس کا دودھ',
+        price: 260,
+        unitEn: 'kg',
+        unitUr: 'کلو'
+      },
+      {
+        id: 'milk_cow',
+        icon: '🐄',
+        en: 'Cow Milk (Pure)',
+        ur: 'گائے کا خالص دودھ',
+        descEn: 'Light, healthy & pure cow milk',
+        descUr: 'خالص اور صحت بخش گائے کا دودھ',
+        price: 260,
+        unitEn: 'kg',
+        unitUr: 'کلو'
+      },
+      {
+        id: 'dahi',
+        icon: '🥣',
+        en: 'Fresh Dahi (Yogurt)',
+        ur: 'تازہ دہی',
+        descEn: 'Thick, sweet & fresh daily dahi',
+        descUr: 'تازہ، گاڑھا اور میٹھا دہی',
+        price: 280,
+        unitEn: 'kg',
+        unitUr: 'کلو'
+      },
+      {
+        id: 'makhan',
+        icon: '🧈',
+        en: 'Fresh Makhan (Butter)',
+        ur: 'تازہ مکھن',
+        descEn: 'Homemade style pure white butter',
+        descUr: 'خالص اور تازہ دیسی مکھن',
+        price: null,
+        unitEn: 'pack/kg',
+        unitUr: 'پیک/کلو'
+      },
+      {
+        id: 'khoya',
+        icon: '🍮',
+        en: 'Pure Khoya',
+        ur: 'خالص کھویا',
+        descEn: 'Fresh milk khoya for sweets & cooking',
+        descUr: 'میٹھائی اور پکوان کے لیے خالص کھویا',
+        price: null,
+        unitEn: 'pack/kg',
+        unitUr: 'پیک/کلو'
+      },
+      {
+        id: 'desi_ghee',
+        icon: '✨',
+        en: 'Pure Desi Ghee',
+        ur: 'خالص دیسی گھی',
+        descEn: 'Rich aroma & 100% pure desi ghee',
+        descUr: 'خوشبودار اور سو فیصد خالص دیسی گھی',
+        price: null,
+        unitEn: 'jar/kg',
+        unitUr: 'جار/کلو'
+      },
+      {
+        id: 'lassi',
+        icon: '🥤',
+        en: 'Fresh Lassi',
+        ur: 'تازہ لسی',
+        descEn: 'Chilled traditional sweet/salted lassi',
+        descUr: 'ٹھنڈی اور مزیدار دیسی لسی',
+        price: null,
+        unitEn: 'glass/jug',
+        unitUr: 'گلاس/جگ'
+      },
+      {
+        id: 'bakery',
+        icon: '🥐',
+        en: 'Bakery Items',
+        ur: 'بیکری آئٹمز',
+        descEn: 'Rusks, biscuits, cakes & fresh bakery',
+        descUr: 'رس، بسکٹ، کیک اور تازہ بیکری آئٹمز',
+        price: null,
+        unitEn: 'pack',
+        unitUr: 'پیک'
+      }
+    ];
+
+    const translations = {
+      en: {
+        navItems: 'Dairy & Bakery',
+        navWater: 'Water Supply',
+        navContact: 'Contact',
+        heroBadge: '100% Pure & Fresh Daily Dairy',
+        heroTitle: 'Mushtaq Meo Milk Shop',
+        heroDesc: 'Pure Buffalo & Cow Milk, fresh thick Dahi, Makhan, Khoya, Desi Ghee, Lassi, Bakery items, and reliable Water Supply — order directly on WhatsApp in seconds.',
+        heroBtnOrder: '🛒 Build WhatsApp Order',
+        heroBtnDirectWa: '💬 Direct WhatsApp Chat',
+        heroBtnWater: '💧 Water Supply',
+        todayRates: "Today's Highlights",
+        rateMilk: 'Buffalo & Cow Milk',
+        milkPricePill: 'Rs. 260 / kg',
+        rateDahi: 'Fresh Thick Dahi',
+        dahiPricePill: 'Rs. 280 / kg',
+        rateSpecial: 'Makhan, Khoya, Desi Ghee, Lassi & Bakery',
+        freshPill: 'Fresh Daily',
+        rateWater: 'Water Supply Timing',
+        menuTag: 'Fresh Dairy & Bakery',
+        menuTitle: 'Select Items & Order on WhatsApp',
+        menuSubtitle: 'Tap + to add items. Your formatted WhatsApp order message will be created automatically.',
+        orderSummaryTitle: '🧾 Your WhatsApp Order',
+        clearBtn: 'Clear All',
+        estimatedTotal: 'Estimated Total (Priced Items):',
+        labelName: 'Your Name / آپ کا نام',
+        labelAddress: 'Delivery Address / پتہ',
+        labelNote: 'Extra Details (Optional) / مزید تفصیل',
+        sendWaBtn: 'Send Order on WhatsApp (+92 341 2881746)',
+        waterTag: 'Water Supply Service',
+        waterTitle: 'Clean Drinking Water Supply',
+        waterTimeText: 'Order Anytime: 10:30 AM to 10:30 PM (صبح 10:30 سے رات 10:30 تک)',
+        waterDesc: 'Need water cans or bottles delivered? You can call or send a direct WhatsApp order anytime between 10:30 AM and 10:30 PM.',
+        callWaterBtn: 'Call Water Supply: 0328-9795134',
+        waterQuickTitle: '💧 Quick Water WhatsApp Order',
+        waterQtyLabel: 'Quantity (Bottles / Cans) — تعداد',
+        waterAddrLabel: 'Address / پتہ',
+        waterWaBtnText: 'Order Water on WhatsApp (0328-9795134)',
+        contactTag: 'Direct Contact',
+        contactTitle: 'Call or WhatsApp Us',
+        contactSubtitle: 'Reach the right number directly for shop orders, inquiries, or water supply.',
+        callOnlyBadge: '📞 Call Only (صرف کال)',
+        callOnlyTitle: 'Shop Inquiry Line',
+        callNow: 'Call Now',
+        bothShopBadge: '📞 Call & WhatsApp (آرڈر نمبر)',
+        shopOrderTitle: 'Dairy & Bakery Orders',
+        callBtn: 'Call',
+        bothWaterBadge: '💧 Call & WhatsApp (واٹر سپلائی)',
+        waterContactTitle: 'Water Supply (10:30 AM – 10:30 PM)',
+        footerDesc: 'Pure Buffalo & Cow Milk • Dahi • Makhan • Khoya • Desi Ghee • Lassi • Bakery • Water Supply',
+        itemsSelected: 'items selected',
+        quickOrderWa: 'Order on WhatsApp',
+        askRate: 'Fresh / Ask Rate',
+        emptyCart: 'No items selected yet. Tap + on any item, or click the WhatsApp button below for a direct message.'
+      },
+      ur: {
+        navItems: 'دودھ و بیکری',
+        navWater: 'واٹر سپلائی',
+        navContact: 'رابطہ نمبرز',
+        heroBadge: 'سو فیصد خالص اور تازہ دودھ و مصنوعات',
+        heroTitle: 'مشتاق میو ملک شاپ',
+        heroDesc: 'بھینس اور گائے کا خالص دودھ، تازہ دہی، مکھن، کھویا، دیسی گھی، لسی، بیکری آئٹمز اور واٹر سپلائی — چند سیکنڈ میں واٹس ایپ پر آرڈر کریں۔',
+        heroBtnOrder: '🛒 واٹس ایپ آرڈر بنائیں',
+        heroBtnDirectWa: '💬 ڈائریکٹ واٹس ایپ میسج',
+        heroBtnWater: '💧 واٹر سپلائی',
+        todayRates: 'آج کے اہم ریٹس',
+        rateMilk: 'بھینس اور گائے کا دودھ',
+        milkPricePill: '260 روپے کلو',
+        rateDahi: 'تازہ گاڑھا دہی',
+        dahiPricePill: '280 روپے کلو',
+        rateSpecial: 'مکھن، کھویا، دیسی گھی، لسی اور بیکری',
+        freshPill: 'روزانہ تازہ',
+        rateWater: 'واٹر سپلائی ٹائمنگ',
+        menuTag: 'تازہ ڈیری اور بیکری',
+        menuTitle: 'آئٹمز منتخب کریں اور واٹس ایپ پر آرڈر کریں',
+        menuSubtitle: 'اپنی پسند کی چیز کے آگے + دبائیں، آپ کا واٹس ایپ آرڈر میسج خود بخود تیار ہو جائے گا۔',
+        orderSummaryTitle: '🧾 آپ کا واٹس ایپ آرڈر',
+        clearBtn: 'سب صاف کریں',
+        estimatedTotal: 'کل رقم (مقررہ ریٹس کے مطابق):',
+        labelName: 'آپ کا نام',
+        labelAddress: 'ڈیلیوری کا پتہ',
+        labelNote: 'مزید تفصیل (اختیاری)',
+        sendWaBtn: 'واٹس ایپ پر آرڈر بھیجیں (+92 341 2881746)',
+        waterTag: 'واٹر سپلائی سروس',
+        waterTitle: 'صاف اور معیاری واٹر سپلائی',
+        waterTimeText: 'آرڈر ٹائم: صبح 10:30 سے رات 10:30 تک کسی بھی وقت آرڈر کریں',
+        waterDesc: 'پانی کی بوتلیں یا کین منگوانے کے لیے صبح 10:30 سے رات 10:30 تک کسی بھی وقت کال یا واٹس ایپ پر آرڈر کریں۔',
+        callWaterBtn: 'واٹر سپلائی کال: 0328-9795134',
+        waterQuickTitle: '💧 فوری واٹر سپلائی واٹس ایپ آرڈر',
+        waterQtyLabel: 'تعداد (بوتلیں / کین)',
+        waterAddrLabel: 'پتہ لکھیں',
+        waterWaBtnText: 'واٹس ایپ پر پانی آرڈر کریں (0328-9795134)',
+        contactTag: 'براہ راست رابطہ',
+        contactTitle: 'کال یا واٹس ایپ کریں',
+        contactSubtitle: 'شاپ آرڈر، معلومات یا واٹر سپلائی کے لیے متعلقہ نمبر پر رابطہ کریں۔',
+        callOnlyBadge: '📞 صرف کال کے لیے',
+        callOnlyTitle: 'شاپ انکوائری نمبر',
+        callNow: 'ابھی کال کریں',
+        bothShopBadge: '📞 کال اور واٹس ایپ',
+        shopOrderTitle: 'دودھ، دہی اور بیکری آرڈر',
+        callBtn: 'کال',
+        bothWaterBadge: '💧 کال اور واٹس ایپ',
+        waterContactTitle: 'واٹر سپلائی (صبح 10:30 تا رات 10:30)',
+        footerDesc: 'خالص دودھ • دہی • مکھن • کھویا • دیسی گھی • لسی • بیکری • واٹر سپلائی',
+        itemsSelected: 'آئٹمز منتخب',
+        quickOrderWa: 'واٹس ایپ پر آرڈر کریں',
+        askRate: 'تازہ / ریٹ پوچھیں',
+        emptyCart: 'ابھی کوئی آئٹم منتخب نہیں۔ کسی بھی آئٹم پر + دبائیں یا نیچے بٹن سے ڈائریکٹ واٹس ایپ میسج بھیجیں۔'
+      }
+    };
+
+    let currentLang = 'en';
+    const cart = {};
+    products.forEach(p => cart[p.id] = 0);
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ur' : 'en';
+      document.documentElement.lang = currentLang === 'ur' ? 'ur' : 'en';
+      document.documentElement.dir = currentLang === 'ur' ? 'rtl' : 'ltr';
+      document.getElementById('langBtnText').textContent = currentLang === 'en' ? 'اردو میں دیکھیں' : 'Switch to English';
+
+      const dict = translations[currentLang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      renderProducts();
+      updateOrderSummary();
+    }
+
+    function changeQty(id, delta) {
+      cart[id] = Math.max(0, (cart[id] || 0) + delta);
+      renderProducts();
+      updateOrderSummary();
+    }
+
+    function clearCart() {
+      products.forEach(p => cart[p.id] = 0);
+      renderProducts();
+      updateOrderSummary();
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      const dict = translations[currentLang];
+
+      grid.innerHTML = products.map(p => {
+        const qty = cart[p.id] || 0;
+        const unit = currentLang === 'ur' ? p.unitUr : p.unitEn;
+        const priceText = p.price
+          ? (currentLang === 'ur' ? `${p.price} روپے / کلو` : `Rs. ${p.price} / kg`)
+          : dict.askRate;
+
+        return `
+          <div class="product-card ${qty > 0 ? 'active' : ''}">
+            <div>
+              <div class="product-top">
+                <div class="product-icon">${p.icon}</div>
+                <span class="price-badge ${p.price ? '' : 'ask'}">${priceText}</span>
+              </div>
+              <div class="product-title">${currentLang === 'ur' ? p.ur : p.en}</div>
+              <div class="product-urdu">${currentLang === 'ur' ? p.en : p.ur}</div>
+              <p class="product-desc">${currentLang === 'ur' ? p.descUr : p.descEn}</p>
+            </div>
+            <div class="qty-bar">
+              <button type="button" class="qty-btn minus" onclick="changeQty('${p.id}', -1)" aria-label="Decrease">−</button>
+              <span class="qty-val">${qty} ${qty > 0 ? unit : ''}</span>
+              <button type="button" class="qty-btn" onclick="changeQty('${p.id}', 1)" aria-label="Increase">+</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function updateOrderSummary() {
+      const cartEl = document.getElementById('cartItems');
+      const totalEl = document.getElementById('cartTotal');
+      const previewEl = document.getElementById('msgPreview');
+      const waBtn = document.getElementById('waOrderBtn');
+      const floatCount = document.getElementById('floatCount');
+      const floatWaBtn = document.getElementById('floatWaBtn');
+
+      const dict = translations[currentLang];
+      const name = document.getElementById('custName').value.trim();
+      const addr = document.getElementById('custAddress').value.trim();
+      const note = document.getElementById('custNote').value.trim();
+
+      let total = 0;
+      let totalCount = 0;
+      const lines = [];
+      let htmlRows = '';
+
+      products.forEach(p => {
+        const q = cart[p.id] || 0;
+        if (q > 0) {
+          totalCount += q;
+          const itemTotal = p.price ? p.price * q : null;
+          if (itemTotal) total += itemTotal;
+
+          htmlRows += `
+            <div class="cart-item-row">
+              <span>${p.en} (${p.ur}) × ${q}</span>
+              <strong>${itemTotal ? 'Rs. ' + itemTotal : dict.askRate}</strong>
+            </div>
+          `;
+          lines.push(`• ${p.en} (${p.ur}): ${q} ${p.unitEn}${itemTotal ? ' — Rs. ' + itemTotal : ''}`);
+        }
+      });
+
+      floatCount.textContent = totalCount;
+      cartEl.innerHTML = htmlRows || `<div class="cart-empty">${dict.emptyCart}</div>`;
+      totalEl.textContent = `Rs. ${total}`;
+
+      let message = `Assalam-o-Alaikum *Mushtaq Meo Milk Shop*,\nMujhe yeh order chahiye:\n\n`;
+      if (lines.length > 0) {
+        message += lines.join('\n');
+        if (total > 0) message += `\n\n*Estimated Total (Priced Items):* Rs. ${total}`;
+      } else {
+        message += `Mujhe fresh dairy / bakery items order karne hain.`;
+      }
+      if (name) message += `\n\n*Name:* ${name}`;
+      if (addr) message += `\n*Address:* ${addr}`;
+      if (note) message += `\n*Note:* ${note}`;
+
+      previewEl.textContent = message;
+      const encodedUrl = `https://wa.me/923412881746?text=${encodeURIComponent(message)}`;
+      waBtn.href = encodedUrl;
+      floatWaBtn.href = encodedUrl;
+    }
+
+    function updateWaterLink() {
+      const qty = document.getElementById('waterQty').value.trim() || '1 Bottle / Can';
+      const addr = document.getElementById('waterAddr').value.trim();
+      let msg = `Assalam-o-Alaikum *Mushtaq Meo Water Supply*,\nMujhe Water Supply ka order dena hai:\n\n• *Quantity:* ${qty}`;
+      if (addr) msg += `\n• *Address:* ${addr}`;
+      document.getElementById('waterWaBtn').href = `https://wa.me/923289795134?text=${encodeURIComponent(msg)}`;
+    }
+
+    renderProducts();
+    updateOrderSummary();
+    updateWaterLink();
+  </script>
+</body>
+</html>
